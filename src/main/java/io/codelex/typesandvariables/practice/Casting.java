@@ -14,8 +14,8 @@ public class Casting {
         float e = 5;
 
         //fixme - should be 15 :| 
-        //int sum = a + b + c + d + e;
-        //System.out.println(sum);
+        int sum = Integer.parseInt(a) + b + c + (int) d + (int) e; // We use Integer.parseInt to extract numeric value from the string, then cast (int) to double and float values
+        System.out.println(sum);
     }
 
     private static void second() {
@@ -26,7 +26,7 @@ public class Casting {
         float e = 5.3f;
 
         //fixme - should be 15.5 :| 
-        //float sum = a + b + c + d + e;
-        //System.out.println(sum);
+        float sum = Float.parseFloat(a) + (float) b + (float) c + (float) d + e;
+        System.out.println(sum);
     }
 }

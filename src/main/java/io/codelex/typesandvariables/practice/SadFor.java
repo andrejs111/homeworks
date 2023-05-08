@@ -4,16 +4,17 @@ import io.codelex.NoCodeWrittenException;
 
 public class SadFor {
     public static void main(String[] args) {
-        System.out.println(test1());
+        test1();                                       // calls the method test1
     }
 
-    public static int test1() {
-//fixme
-//        for (int i = 0; i < 10; i++) {
-//            if (Math.sqrt(i) > 2.5)
-//                break;
-//        }
-//        return i;
-        throw new NoCodeWrittenException();
+    public static void test1() {
+        for (int i = 0; i < 10; i++) {
+            if (Math.sqrt(i) > 2.5) {
+                System.out.println(i);
+                break;                     // if the sqrt of the number is > 2.5, the loop stops
+            } else {
+                System.out.println(i);     // continues the loop if sqrt of i is < 2.5
+            }
+        }
     }
 }

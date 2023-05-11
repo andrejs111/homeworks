@@ -9,45 +9,41 @@ public class TenBillion {
         Scanner in = new Scanner(System.in);
         System.out.print("Input an integer number less than ten billion: ");
 
-        long n = in.nextLong();
 
-        /*
-        todo - check if Long
-        if (?) {
-            //todo - check if n is less than zero
-            if (?) {
+        if (in.hasNextLong()) {
+            long n = in.nextLong();
+
+            if (n < 0) {
                 n *= -1;
             }
-            fixme
-            if (?) {
+            if (n >= 10000000000L) {
                 System.out.println("Number is greater or equals 10,000,000,000!");
             } else {
                 int digits = 1;
-                if (?) {
-                    digits = 2;
-                } else if (?) {
-                    digits = 3;
-                } else if (?) {
-                    digits = 4;
-                } else if (?) {
-                    digits = 5;
-                } else if (?) {
-                    digits = 6;
-                } else if (?) {
-                    digits = 7;
-                } else if (?) {
-                    digits = 8;
-                } else if (?) {
-                    digits = 9;
-                } else if (?) {
+                if (n >= 1000000000) {
                     digits = 10;
+                } else if (n >= 100000000) {
+                    digits = 9;
+                } else if (n >= 10000000) {
+                    digits = 8;
+                } else if (n >= 1000000) {
+                    digits = 7;
+                } else if (n >= 100000) {
+                    digits = 6;
+                } else if (n >= 10000) {
+                    digits = 5;
+                } else if (n >= 1000) {
+                    digits = 4;
+                } else if (n >= 100) {
+                    digits = 3;
+                } else if (n >= 10) {
+                    digits = 2;
                 }
                 System.out.println("Number of digits in the number: " + digits);
             }
         } else {
             System.out.println("The number is not a long");
         }
-        */
     }
 
 }

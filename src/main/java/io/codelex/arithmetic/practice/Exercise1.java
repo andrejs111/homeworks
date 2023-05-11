@@ -12,8 +12,7 @@ public class Exercise1 {
 
         if (num1 == 15 || num2 == 15) {
             System.out.println("True");
-        }
-        if (num1 + num2 == 15 || num1 - num2 == 15 || num2 - num1 == 15) {
+        } else if (num1 + num2 == 15 || num1 - num2 == 15 || num2 - num1 == 15) {
             System.out.println("True");
         }
         else {

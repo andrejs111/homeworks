@@ -60,8 +60,7 @@ public class CalculateArea {
         // Get input from user
         Scanner keyboard = new Scanner(System.in);
         System.out.print("What is the circle's radius? ");
-        String input = keyboard.nextLine();
-        double r = Double.parseDouble(input);
+        double r = keyboard.nextDouble();
         double area = Math.PI * r * r;
         //todo
         //radius = keyboard.nextDouble();
@@ -76,16 +75,14 @@ public class CalculateArea {
         Scanner keyboard = new Scanner(System.in);
 
         // Get length
-        System.out.print("Enter length? ");
-        String input = keyboard.nextLine();  // read users input as a string first
-        double length = Double.parseDouble(input);
+        System.out.print("Enter length? ");// read users input as a string first
+        double length = keyboard.nextDouble();
         //todo
         //length = keyboard.nextDouble();
 
         // Get width
-        System.out.print("Enter width? ");
-        String input1 = keyboard.nextLine();  // read users input as a string first
-        double width = Double.parseDouble(input1);
+        System.out.print("Enter width? "); // read users input as a string first
+        double width = keyboard.nextDouble();;
         //todo
         //width = keyboard.nextDouble();
         double area = width * length;
@@ -101,15 +98,13 @@ public class CalculateArea {
 
         // Get the base
         System.out.print("Enter length of the triangle's base? ");
-        String input = keyboard.nextLine();
-        double base = Double.parseDouble(input);
+        double base = keyboard.nextDouble();
         //todo
         //base = keyboard.nextDouble();
 
         // Get the height
         System.out.print("Enter triangle's height? ");
-        String input1 = keyboard.nextLine();
-        double height = Double.parseDouble(input1);
+        double height = keyboard.nextDouble();
         //todo
         //height = keyboard.nextDouble();
         double area = 0.5 * base * height;

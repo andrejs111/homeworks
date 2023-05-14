@@ -15,12 +15,15 @@ public class RandomNumberPositions {
         System.out.println("Which number index would you like to find?");
 
         int searchFor = scanner.nextInt();
-
         int i;
         boolean foundIt = false;
 
+
         for (i = 0; i < integers.length; i++) {
-            //todo - search for integer - break when you have found what you searched for
+            if (integers[i] == searchFor) {
+                foundIt = true;
+                break;
+            }
         }
 
         if (foundIt) {

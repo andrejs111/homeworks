@@ -1,4 +1,5 @@
 package io.codelex.arrays.practice;
+import java.util.Arrays;
 
 public class Exercise1 {
 
@@ -10,6 +11,11 @@ public class Exercise1 {
                 1458, 2458, 1254, 1472, 2365,
                 1456, 2165, 1457, 2456
         };
+        System.out.println("Original numeric array : " + Arrays.toString(myArray1));
+        Arrays.sort(myArray1);
+        System.out.println("Sorted numeric array : " + Arrays.toString(sortIntArray(myArray1)));
+        // or
+
 
         String[] myArray2 = {
                 "Java",
@@ -19,16 +25,18 @@ public class Exercise1 {
                 "C Programming",
                 "C++"
         };
+        System.out.println("Original string array : " + Arrays.toString(myArray2));
+        Arrays.sort(myArray2);
+        System.out.println("Sorted string array : " + Arrays.toString(sortStringArray(myArray2)));
 
-        /*
-        fixme
-        System.out.println("Original numeric array : " + .........);
-        ........... //Sort array
-        System.out.println("Sorted numeric array : " + .........);
+    }
+    public static int[] sortIntArray(int[] array) {
+        Arrays.sort(array);
+        return array;
+    }
 
-        System.out.println("Original string array : " + .........);
-        ......... //Sort array
-        System.out.println("Sorted string array : " + .........);
-        */
+    public static String[] sortStringArray(String[] array) {
+        Arrays.sort(array);
+        return array;
     }
 }

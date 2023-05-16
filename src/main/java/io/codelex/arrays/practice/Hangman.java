@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Hangman {
     static final ArrayList<String> words = new ArrayList<>(Arrays.asList(
-            "machine", "apple", "library", "computer", "world", "chariot", "war", "infinity"
+            "machine", "apple", "library", "computer", "world", "chariot", "war", "system"
     ));
     static final int allowedGuesses = 15;
 

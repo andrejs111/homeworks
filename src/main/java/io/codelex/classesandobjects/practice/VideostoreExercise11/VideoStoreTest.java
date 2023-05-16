@@ -1,4 +1,4 @@
-package io.codelex.classesandobjects.practice.videostore;
+package io.codelex.classesandobjects.practice.VideostoreExercise11;
 
 import java.util.Scanner;
 
@@ -42,7 +42,7 @@ public class VideoStoreTest {
             String movieName = scanner.next();
             System.out.println("Enter rating");
             int rating = scanner.nextInt();
-            //todo - add video
+            Video newVideo = new Video(movieName, rating);
         }
     }
 

@@ -19,7 +19,7 @@ public class TicTacToe {
             Scanner input = new Scanner(System.in);
             System.out.println("Enter your placement (1-9, left to right, top to bottom):");
             int placementHuman = input.nextInt();
-            while(humanPositions.contains(placementHuman) || cpuPositions.contains(placementHuman)) {                // needed to not overwrite the other player's moves
+            while(humanPositions.contains(placementHuman) || cpuPositions.contains(placementHuman)) {      // needed to not overwrite the other player's moves
                 System.out.println("Placement taken. Choose another position: ");
                 placementHuman = input.nextInt();
             }
@@ -67,33 +67,15 @@ public class TicTacToe {
         }
 
         switch (placement) {
-            case 1:
-                board[0][0] = symbol;
-                break;
-            case 2:
-                board[0][1] = symbol;
-                break;
-            case 3:
-                board[0][2] = symbol;
-                break;
-            case 4:
-                board[1][0] = symbol;
-                break;
-            case 5:
-                board[1][1] = symbol;
-                break;
-            case 6:
-                board[1][2] = symbol;
-                break;
-            case 7:
-                board[2][0] = symbol;
-                break;
-            case 8:
-                board[2][1] = symbol;
-                break;
-            case 9:
-                board[2][2] = symbol;
-                break;
+            case 1 -> board[0][0] = symbol;
+            case 2 -> board[0][1] = symbol;
+            case 3 -> board[0][2] = symbol;
+            case 4 -> board[1][0] = symbol;
+            case 5 -> board[1][1] = symbol;
+            case 6 -> board[1][2] = symbol;
+            case 7 -> board[2][0] = symbol;
+            case 8 -> board[2][1] = symbol;
+            case 9 -> board[2][2] = symbol;
         }
     }
 

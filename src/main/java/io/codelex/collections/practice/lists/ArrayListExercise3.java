@@ -15,6 +15,8 @@ public class ArrayListExercise3 {
         colors.add("White");
         colors.add("Black");
         System.out.println(colors);
+        colors.set(0, "Yellow");
+        colors.set(2, "Purple");
 
         //TODO: Add new color at the first and third position of the list
 

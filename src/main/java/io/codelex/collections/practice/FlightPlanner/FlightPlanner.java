@@ -10,12 +10,13 @@ import java.util.*;
 
 public class FlightPlanner {
     private static final Charset charset = Charset.defaultCharset();
-    private static final String file = "C:\\Users\\Andrey\\Desktop\\CODELEX\\Projects\\homeworks\\src\\main\\resources\\collections\\flights.txt";
+    private static final String file = "ytttttttttttttttt6collections\\flights.txt";
 
     public static void main(String[] args) throws IOException {
         final Path path = Paths.get(file);
         Scanner input = new Scanner(System.in);
         boolean running = true;
+        List<Flight> travel = new ArrayList<>();
 
         while (running) {
             System.out.println("What would you like to do? ");
@@ -24,21 +25,39 @@ public class FlightPlanner {
             String decision = input.nextLine();
             if (decision.equals("1")) {
                 System.out.println("List of cities: ");
-                findAllCities(path);
+                Collection<String> allCities = findAllCities(path);
+                System.out.println(allCities);
+
                 System.out.println("Which city would you like to start from? ");
                 String originCity = input.nextLine();
+                List<Flight> allFlights = findAllFlights(path);
+                List<String> availableDestinations = findAvailableDestinations(allFlights, originCity);
+
+                System.out.println("Available destinations for " + originCity + ": ");
+                System.out.println(availableDestinations);
+
                 System.out.println("Which city would you like to go to?");
                 String destinationCity = input.nextLine();
-                System.out.println("Would you like to go somewhere else? Choose a city or type '#' to exit the program.");
 
-
-                System.out.println("Your chosen flight(-s) will be: ");
+                Flight chosenFlight = findFlight(allFlights, originCity, destinationCity);
+                if (chosenFlight != null) {
+                    travel.add(chosenFlight);
+                    System.out.println("Flight added to travel list.");
+                    System.out.println("Your current city: " + destinationCity);
+                } else {
+                    System.out.println("No direct flight available from " + originCity + " to " + destinationCity);
+                }
             } else if (decision.equals("#")) {
                 System.out.println("Goodbye!");
-                System.exit(0);
+                running = false;
             } else {
                 System.out.println("Invalid input.");
             }
+        }
+
+        System.out.println("Your chosen flights: ");
+        for (Flight flight : travel) {
+            System.out.println(flight);
         }
     }
 
@@ -52,7 +71,6 @@ public class FlightPlanner {
                 }
             }
         }
-        System.out.println(cities);
         return cities;
     }
 
@@ -67,8 +85,25 @@ public class FlightPlanner {
                 flights.add(flight);
             }
         }
-        System.out.println(flights);
         return flights;
+    }
+
+    public static List<String> findAvailableDestinations(List<Flight> flights, String originCity) {
+        List<String> destinations = new ArrayList<>();
+        for (Flight flight : flights) {
+            if (flight.getOrigin().equals(originCity)) {
+                destinations.add(flight.getDestination());
+            }
+        }
+        return destinations;
+    }
+    public static Flight findFlight(List<Flight> flights, String originCity, String destinationCity) {
+        for (Flight flight : flights) {
+            if (flight.getOrigin().equals(originCity) && flight.getDestination().equals(destinationCity)) {
+                return flight;
+            }
+        }
+        return null;
     }
 }
 

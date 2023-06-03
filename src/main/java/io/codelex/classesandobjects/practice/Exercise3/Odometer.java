@@ -3,7 +3,7 @@ package io.codelex.classesandobjects.practice.Exercise3;
 import java.util.Scanner;
 
 public class Odometer {
-    double mileage;
+    private double mileage;
 
     public Odometer(double mileage) {
         this.mileage = mileage;

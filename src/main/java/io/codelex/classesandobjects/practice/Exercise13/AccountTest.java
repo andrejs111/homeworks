@@ -4,7 +4,6 @@ public class AccountTest {
     public static void main (String[] args) {
         firstAccount();
         moneyTransfer();
-
     }
     public static void firstAccount() {
         Account firstAccount = new Account("Barto's account", 100);

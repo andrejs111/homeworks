@@ -1,8 +1,9 @@
 package io.codelex.classesandobjects.practice.Exercise8;
 
 public class SavingsAccount {
-    double balance;
-    double interestRate;
+    protected double balance;
+    protected double interestRate;
+
     public SavingsAccount(double startingBalance) {
         this.balance = startingBalance;
     }

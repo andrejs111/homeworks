@@ -3,7 +3,7 @@ package io.codelex.classesandobjects.practice.Exercise2;
 import java.util.Scanner;
 
 class LitersPerKilometer {
-    /* public static void main( String[] args )  {
+    public static void litersPerKilometer()  {
         Scanner scan = new Scanner(System.in);
 
         double startKilometers, endKilometers, liters;
@@ -20,7 +20,5 @@ class LitersPerKilometer {
         Car car = new Car(startKilometers, endKilometers, liters);
 
         System.out.println( "Kilometers per liter are "  + car.calculateConsumption() );
-
     }
-     */
 }

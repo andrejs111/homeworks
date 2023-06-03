@@ -8,16 +8,16 @@ public class Exercise6 {
     public static void main(String[] args) {
         Random random = new Random();
 
-        int[] Array1 = new int[10];
-        int[] Array2 = new int[10];
-        for (int i = 0; i < Array1.length; i++) {
-            Array1[i] = random.nextInt(100);
+        int[] array1 = new int[10];
+        int[] array2 = new int[10];
+        for (int i = 0; i < array1.length; i++) {
+            array1[i] = random.nextInt(100);
         }
-            for (int j = 0; j < Array1.length; j++) {
-                Array2[j] = Array1[j];
-            }
-            Array2[9] = -7;
-        System.out.println("Array 1: " + Arrays.toString(Array1));
-        System.out.println("Array 2: " + Arrays.toString(Array2));
+        for (int j = 0; j < array1.length; j++) {
+            array2[j] = array1[j];
         }
+        array2[9] = -7;
+        System.out.println("Array 1: " + Arrays.toString(array1));
+        System.out.println("Array 2: " + Arrays.toString(array2));
     }
+}

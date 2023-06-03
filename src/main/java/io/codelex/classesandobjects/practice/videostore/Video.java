@@ -7,7 +7,7 @@ import java.util.List;
 public class Video {
     private String name;
     private List<Integer> ratings;
-    boolean checked;
+    protected boolean checked;
 
     public Video(String name, int rating, boolean checked) {
         this.name = name;
@@ -38,7 +38,6 @@ public class Video {
             double avgRating = (double) sum / ratings.size();
             System.out.println(avgRating);
         }
-
 }
     @Override
     public String toString() {

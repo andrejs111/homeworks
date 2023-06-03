@@ -1,4 +1,5 @@
 package io.codelex.arrays.practice;
+import java.util.Arrays;
 import java.util.Scanner;
 public class Exercise4 {
 
@@ -16,19 +17,11 @@ public class Exercise4 {
     }
 
     public static String findNumber(int number, int[] array) {
-        boolean found = false;
-        String result;
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] == number) {
-                found = true;
-                break;
-            }
-        }
-            if (found) {
-                result = "Contains!";
-            } else {
-                result = "There is no such number in this array.";
-            }
-            return result;
+        boolean found = Arrays.stream(array).anyMatch(n -> n == number);
+        if (found) {
+            return "Contains!";
+        } else {
+            return "There is no such number in this array.";
         }
     }
+}

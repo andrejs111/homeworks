@@ -6,7 +6,5 @@ public class MainTest {
         myAccount.deposit(0);
         myAccount.withdraw(101);
         System.out.println(myAccount);
-
-
     }
 }

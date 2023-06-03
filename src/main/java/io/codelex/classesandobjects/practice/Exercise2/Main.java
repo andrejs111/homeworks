@@ -1,5 +1,6 @@
 package io.codelex.classesandobjects.practice.Exercise2;
 import java.util.Scanner;
+import static io.codelex.classesandobjects.practice.Exercise2.LitersPerKilometer.litersPerKilometer;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,7 +10,6 @@ public class Main {
         bmw.calculateConsumption();
         mercedes.calculateConsumption();
         userCar();
-
     }
     public static void userCar() {
         Scanner input = new Scanner(System.in);
@@ -29,6 +29,5 @@ public class Main {
         } else {
             System.out.println("Your car is an economy car.");
         }
-
     }
 }

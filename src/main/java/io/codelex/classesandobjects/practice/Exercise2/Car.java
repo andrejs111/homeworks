@@ -1,12 +1,18 @@
 package io.codelex.classesandobjects.practice.Exercise2;
 
 public class Car {
-    double startOdo;
-    double endOdo;
-    double liters;
+    private double startOdo;
+    private double endOdo;
+    private double liters;
 
     public Car(double startKilometers) {
         this.startOdo = startKilometers;
+    }
+
+    public Car (double startKilometers, double endKilometers, double liters) {
+        this.startOdo = startKilometers;
+        this.endOdo = endKilometers;
+        this.liters = liters;
     }
 
     double calculateConsumption() {

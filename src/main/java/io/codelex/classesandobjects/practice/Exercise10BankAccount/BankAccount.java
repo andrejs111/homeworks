@@ -1,9 +1,9 @@
 package io.codelex.classesandobjects.practice.Exercise10BankAccount;
 
 public class BankAccount {
-    public String name;
 
-    public double balance;
+    private String name;
+    private double balance;
 
     public BankAccount(String name, double balance) {
         this.name = name;

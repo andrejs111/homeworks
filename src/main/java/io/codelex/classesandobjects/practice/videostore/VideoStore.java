@@ -30,7 +30,7 @@ public class VideoStore {
         System.out.println("What movie would you like to check out? ");
         String name = input.next();
         for (Video video : inventory) {
-            if (Objects.equals(name, String.valueOf(video.getName()))) {
+            if (name.equals(video.getName())) {
                 if (video.isChecked()) {
                     System.out.println("Movie not available.");
                 } else {
@@ -40,7 +40,6 @@ public class VideoStore {
                 return;
             }
         }
-
         System.out.println("Movie not found in inventory.");
     }
 

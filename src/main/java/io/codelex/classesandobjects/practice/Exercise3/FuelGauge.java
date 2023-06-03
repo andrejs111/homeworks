@@ -3,7 +3,7 @@ package io.codelex.classesandobjects.practice.Exercise3;
 import java.util.Scanner;
 
 public class FuelGauge {
-    double fuel;
+    private double fuel;
 
     public FuelGauge(double liters) {
         this.fuel = liters;

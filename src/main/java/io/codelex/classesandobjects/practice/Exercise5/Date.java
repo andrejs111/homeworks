@@ -1,9 +1,9 @@
 package io.codelex.classesandobjects.practice.Exercise5;
 
 public class Date {
-    int month;
-    int day;
-    int year;
+    private int month;
+    private int day;
+    private int year;
 
     public Date(int month, int day, int year) {
         this.month = month;

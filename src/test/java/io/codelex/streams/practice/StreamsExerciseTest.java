@@ -8,6 +8,7 @@ import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
+import static io.codelex.Preconditions.assertThat;
 import static java.util.Arrays.asList;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
@@ -16,7 +17,6 @@ import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.collection.IsIterableContainingInOrder.contains;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-@SuppressWarnings("SimplifiableJUnitAssertion")
 public class StreamsExerciseTest {
 
     @Test
@@ -252,7 +252,9 @@ public class StreamsExerciseTest {
     @Test
     public void shouldCollectToString() {
         String sample = "Working with Java8 Streams";
-        String result = sample.chars().mapToObj(a -> ((char) a)).collect(new CharacterToStringCollector());
+        String result = sample.chars()
+                .mapToObj(a -> ((char) a))
+                .collect(new CharacterToStringCollector());
         assertThat(sample, equalTo(result));
     }
 }

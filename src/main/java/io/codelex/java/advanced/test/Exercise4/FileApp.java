@@ -7,7 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileApp {
-    private static final String PATH = "C:\\Users\\Andrejs\\Desktop\\CODELEX\\Projects\\homeworks\\src\\main\\java\\io\\codelex\\java\\advanced\\test\\Exercise4\\";
+    private static final String PATH = "C:\\Users\\Andrey\\Desktop\\CODELEX\\Projects\\homeworks\\src\\main\\java\\io\\codelex\\java\\advanced\\test\\Exercise4\\";
 
     public static void main(String[] args) throws IOException {
         try (BufferedReader reader = new BufferedReader(new FileReader(PATH + "myFile.txt"));

@@ -1,5 +1,6 @@
-package io.codelex.java.advanced.test.Exercise2;
+package io.codelex.java.advanced.test.practice;
 
+import io.codelex.java.advanced.test.Exercise2.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

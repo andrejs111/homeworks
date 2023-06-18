@@ -16,20 +16,10 @@ public class CreditCard extends Card{
 
     @Override
     public BigDecimal takeFunds(BigDecimal funds) throws NotEnoughFundsException {
-        BigDecimal remainingFunds = getBalance().subtract(funds);
-        if (remainingFunds.compareTo(BigDecimal.valueOf(100)) < 0) {
+        super.takeFunds(funds);
+        if (getBalance().compareTo(BigDecimal.valueOf(100)) < 0) {
             System.out.println("Warning: Low funds");
         }
-        if (remainingFunds.compareTo(BigDecimal.ZERO) < 0) {
-            throw new NotEnoughFundsException("Insufficient funds");
-        }
-        setBalance(remainingFunds);
-        System.out.println("Remaining funds: " + remainingFunds);
-        return remainingFunds;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
+        return getBalance();
     }
 }

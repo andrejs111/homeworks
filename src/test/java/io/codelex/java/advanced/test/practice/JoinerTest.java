@@ -1,5 +1,6 @@
-package io.codelex.java.advanced.test.Exercise3;
+package io.codelex.java.advanced.test.practice;
 
+import io.codelex.java.advanced.test.Exercise3.Joiner;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +11,7 @@ public class JoinerTest {
     @Test
     public void testJoinerWithDifferentArgs() {
         Joiner<Integer> joinerTest = new Joiner<>();
+        joinerTest.setSeparator("-");
         String result = joinerTest.join(1, 2, 3, 4);
         Assertions.assertEquals(result, "1-2-3-4");
     }

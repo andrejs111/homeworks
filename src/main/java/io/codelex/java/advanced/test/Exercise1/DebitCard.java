@@ -20,17 +20,7 @@ public class DebitCard extends Card{
 
     @Override
     public BigDecimal takeFunds(BigDecimal funds) throws NotEnoughFundsException {
-        BigDecimal remainingFunds = getBalance().subtract(funds);
-        if (remainingFunds.compareTo(BigDecimal.ZERO) < 0) {
-            throw new NotEnoughFundsException("Insufficient funds");
-        }
-        setBalance(remainingFunds);
-        System.out.println("Remaining funds: " + remainingFunds);
-        return remainingFunds;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString();
+        super.takeFunds(funds);
+        return getBalance();
     }
 }

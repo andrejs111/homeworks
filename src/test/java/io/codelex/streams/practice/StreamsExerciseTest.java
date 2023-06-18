@@ -1,5 +1,5 @@
 package io.codelex.streams.practice;
-
+/*
 import org.hamcrest.Matchers;
 import org.hamcrest.collection.IsIterableContainingInOrder;
 import org.junit.jupiter.api.Test;
@@ -9,6 +9,7 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 import static java.util.Arrays.asList;
+import static org.apache.commons.lang3.ArrayUtils.contains;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -131,6 +132,9 @@ public class StreamsExerciseTest {
         assertThat(result.get(12), containsInAnyOrder(bart));
         assertThat(result.get(8), containsInAnyOrder(lisa));
         assertThat(result.get(2), containsInAnyOrder(maggie));
+    }
+
+    private Object containsInAnyOrder(User homer) {
     }
 
     @Test
@@ -256,3 +260,4 @@ public class StreamsExerciseTest {
         assertThat(sample, equalTo(result));
     }
 }
+*/

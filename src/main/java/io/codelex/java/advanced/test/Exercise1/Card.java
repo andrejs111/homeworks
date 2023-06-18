@@ -19,7 +19,13 @@ public abstract class Card {
         return balance = balance.add(funds);
     }
     public BigDecimal takeFunds(BigDecimal funds) throws NotEnoughFundsException {
-        return balance = balance.subtract(funds);
+            BigDecimal remainingFunds = getBalance().subtract(funds);
+            if (remainingFunds.compareTo(BigDecimal.ZERO) < 0) {
+                throw new NotEnoughFundsException("Insufficient funds");
+            }
+            setBalance(remainingFunds);
+            System.out.println("Remaining funds: " + remainingFunds);
+            return remainingFunds;
     }
 
     public BigDecimal getBalance() {

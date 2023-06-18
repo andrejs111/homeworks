@@ -17,12 +17,9 @@ public class PartOfMain {
 
     }
     public static <T> double partOf(List<T> values, Predicate<T> condition) {
-        double count = 0;
-        for (T value : values) {
-            if (condition.test(value)) {
-                count++;
-            }
-        }
+        double count = values.stream()
+                .filter(condition)
+                .count();
         return count / values.size();
     }
 }

@@ -1,7 +1,4 @@
 package io.codelex.trivia.game;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
@@ -16,8 +13,8 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Scanner input = new Scanner(System.in);
         System.out.println("\nYour objective is to correctly answer 20 questions.\n" +
-                            "You will be asked to choose the answer out of three options. Only one option is correct.\n" +
-                            "When you have decided on your answer, choose the respective number: 1, 2 or 3.\n");
+                "You will be asked to choose the answer out of three options. Only one option is correct.\n" +
+                "When you have decided on your answer, choose the respective number: 1, 2 or 3.\n");
         while (correctAnswerCount < MAX_ANSWER_COUNT) {
             System.out.println("\n---NEXT QUESTION---\n");
             Question.getQuestion();
@@ -52,6 +49,9 @@ public class Main {
                 System.out.println("Invalid choice. Moving to the next question.");
             }
             System.out.printf("\n---CORRECT ANSWERS: %d---\n", correctAnswerCount);
+        }
+        if (correctAnswerCount == MAX_ANSWER_COUNT) {
+            System.out.println("Congratulations! You have answered 20 trivia questions correctly!");
         }
     }
 }

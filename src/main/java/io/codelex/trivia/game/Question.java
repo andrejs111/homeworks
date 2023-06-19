@@ -35,7 +35,7 @@ import java.util.regex.Pattern;
         }
 
         // Method that reads the trivia question from the URL and calls the formatQuestion() method next
-        public static void returnQuestion() throws IOException {
+        public static void returnQuestion() {
             StringBuilder question = new StringBuilder();
             try (Scanner scanner = new Scanner(url.openStream())) {
                 while (scanner.hasNextLine()) {
@@ -44,6 +44,8 @@ import java.util.regex.Pattern;
                         question.append(line);
                     }
                 }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
             System.out.println(formatQuestion(question.toString()));
         }
